@@ -17,7 +17,7 @@
     "@codemirror/lang-python": "6.2.1",
     "@codemirror/language": "6.11.0",
     "@codemirror/state": "6.5.2",
-    "@codemirror/view": "6.36.8",
+    "@codemirror/view": "6.43.15",
     "@lezer/highlight": "1.2.5",
     "katex": "0.16.22",
     "next": "16.4.2",
