@@ -18,3 +18,4 @@ web/public/docs/how-to-use.json
 web/test-results/
 web/playwright-report/
 *.tsbuildinfo
+.vercel/

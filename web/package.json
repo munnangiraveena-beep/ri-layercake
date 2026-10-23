@@ -7,6 +7,7 @@
     "py": "node scripts/fetch-py.mjs",
     "dev": "next dev",
     "build": "next build && node scripts/csp.mjs",
+    "vercel-build": "test -f out/py/manifest.json && test -f out/index.html",
     "start": "node scripts/serve.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",

@@ -46,9 +46,14 @@ const security = [
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
 ];
 
+// CI builds and tests the site, then deploys that same out/ with `vercel deploy --prebuilt`,
+// so the hashes above always match what is served. Vercel never builds on push: its own
+// build would skip Pyodide and the notebook and serve a CSP that does not match.
+// The static builder (not @vercel/next) just ships out/; its vercel-build script only checks out/ is complete.
 const vercel = {
   $schema: "https://openapi.vercel.sh/vercel.json",
-  outputDirectory: "out",
+  builds: [{ src: "package.json", use: "@vercel/static-build", config: { distDir: "out" } }],
+  git: { deploymentEnabled: false },
   trailingSlash: true,
   headers: [
     { source: "/(.*)", headers: security },
