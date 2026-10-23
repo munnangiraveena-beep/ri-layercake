@@ -90,7 +90,7 @@ jobs:
       - run: npx eslint .
       - name: Self-host Pyodide and wheels
         run: npm run py
-      - name: Pyodide: the wheel installs and the core subset passes
+      - name: "Pyodide: the wheel installs and the core subset passes"
         run: node scripts/pyodide-test.mjs
       - name: Pre-render the gallery scene
         run: |
