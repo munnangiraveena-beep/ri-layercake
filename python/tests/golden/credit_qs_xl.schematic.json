@@ -1,0 +1,426 @@
+{
+ "schema": "ri-layercake/scene@1",
+ "frame": {
+  "w": 1280,
+  "h": 720,
+  "name": "slide_16x9"
+ },
+ "palette": "ocean",
+ "colors": {
+  "accent1": "#0E5A8A",
+  "accent2": "#1C7C9C",
+  "accent3": "#3FA7B5",
+  "accent4": "#7BC4C4",
+  "accent5": "#E0A33B",
+  "accent6": "#C4513A",
+  "bg1": "#FFFFFF",
+  "bg2": "#E8EEF3",
+  "dk1": "#1B2733",
+  "dk2": "#16324F",
+  "error": "#C0392B",
+  "folHlink": "#5B4B8A",
+  "hlink": "#0E5A8A",
+  "lt1": "#FFFFFF",
+  "lt2": "#E8EEF3",
+  "tx1": "#1B2733",
+  "tx2": "#16324F"
+ },
+ "shapes": [
+  {
+   "type": "text",
+   "id": "title",
+   "x": 40,
+   "y": 66,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Trade credit QS and XoL 2027",
+     "b": true
+    }
+   ],
+   "size": 28,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "title"
+  },
+  {
+   "type": "text",
+   "id": "subtitle",
+   "x": 40,
+   "y": 100,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "QS limited to the largest buyer limit; XoL per buyer on the net"
+    }
+   ],
+   "size": 16,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.35
+   },
+   "role": "subtitle"
+  },
+  {
+   "type": "rect",
+   "id": "L1.block",
+   "layer": "L1",
+   "x": 360.0,
+   "y": 304.0,
+   "w": 560.0,
+   "h": 96.0,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.0
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L1.label",
+   "layer": "L1",
+   "x": 640.0,
+   "y": 349.75,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "£15m xs £5m",
+     "b": true,
+     "s": 14
+    },
+    {
+     "t": "Layer 1 · 1 @ 100%",
+     "s": 12
+    }
+   ],
+   "size": 14,
+   "fill": {
+    "theme": "bg1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "L2.block",
+   "layer": "L2",
+   "x": 360.0,
+   "y": 208.0,
+   "w": 560.0,
+   "h": 96.0,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.6
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L2.label",
+   "layer": "L2",
+   "x": 640.0,
+   "y": 253.75,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "£25m xs £20m",
+     "b": true,
+     "s": 14
+    },
+    {
+     "t": "Layer 2 · 1 @ 100%",
+     "s": 12
+    }
+   ],
+   "size": 14,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "Q1.block",
+   "layer": "Q1",
+   "x": 360.0,
+   "y": 484.0,
+   "w": 224.0,
+   "h": 48.0,
+   "fill": {
+    "theme": "accent3",
+    "tint": 0
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "qs"
+  },
+  {
+   "type": "rect",
+   "id": "Q1.retained",
+   "layer": "Q1",
+   "x": 584.0,
+   "y": 484.0,
+   "w": 336.0,
+   "h": 48.0,
+   "fill": {
+    "theme": "accent3",
+    "tint": 0.8
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "qs_retained"
+  },
+  {
+   "type": "text",
+   "id": "Q1.label",
+   "layer": "Q1",
+   "x": 472.0,
+   "y": 506.0,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "QS 40% ceded",
+     "b": true,
+     "s": 13
+    },
+    {
+     "t": "limit £25m · agg £320m",
+     "s": 10.5
+    }
+   ],
+   "size": 13,
+   "fill": {
+    "theme": "bg1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "text",
+   "id": "Q1.retained.label",
+   "layer": "Q1",
+   "x": 752.0,
+   "y": 512.0,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "60% retained, into the XL layers",
+     "s": 11.5
+    }
+   ],
+   "size": 11.5,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label"
+  }
+ ],
+ "hit": [
+  {
+   "layer": "L1",
+   "edge": "top",
+   "x": 360.0,
+   "w": 560.0,
+   "y": 304.0,
+   "value": 20.0,
+   "per_px": 0.15625
+  },
+  {
+   "layer": "L1",
+   "edge": "bottom",
+   "x": 360.0,
+   "w": 560.0,
+   "y": 400.0,
+   "value": 5.0,
+   "per_px": 0.15625
+  },
+  {
+   "layer": "L1",
+   "edge": "body",
+   "x": 360.0,
+   "y": 304.0,
+   "w": 560.0,
+   "h": 96.0
+  },
+  {
+   "layer": "L1",
+   "edge": "placed",
+   "x": 920.0,
+   "y": 304.0,
+   "h": 96.0,
+   "x0": 360.0,
+   "w": 560.0,
+   "value": 1.0
+  },
+  {
+   "layer": "L2",
+   "edge": "top",
+   "x": 360.0,
+   "w": 560.0,
+   "y": 208.0,
+   "value": 45.0,
+   "per_px": 0.26042000000000004
+  },
+  {
+   "layer": "L2",
+   "edge": "bottom",
+   "x": 360.0,
+   "w": 560.0,
+   "y": 304.0,
+   "value": 20.0,
+   "per_px": 0.26042000000000004
+  },
+  {
+   "layer": "L2",
+   "edge": "body",
+   "x": 360.0,
+   "y": 208.0,
+   "w": 560.0,
+   "h": 96.0
+  },
+  {
+   "layer": "L2",
+   "edge": "placed",
+   "x": 920.0,
+   "y": 208.0,
+   "h": 96.0,
+   "x0": 360.0,
+   "w": 560.0,
+   "value": 1.0
+  },
+  {
+   "layer": "Q1",
+   "edge": "body",
+   "x": 360.0,
+   "y": 484.0,
+   "w": 560.0,
+   "h": 48.0
+  }
+ ],
+ "scale": {
+  "type": "schematic",
+  "y_bottom": 474.0,
+  "y_top": 134.0,
+  "breaks": [
+   [
+    5.0,
+    400.0
+   ],
+   [
+    20.0,
+    304.0
+   ],
+   [
+    20.0,
+    304.0
+   ],
+   [
+    45.0,
+    208.0
+   ]
+  ]
+ },
+ "table": {
+  "columns": [
+   "Layer",
+   "Limit (£m)",
+   "Attachment (£m)",
+   "Order",
+   "Placed",
+   "Premium (RTE) (£m)",
+   "ROL",
+   "Adj. rate",
+   "Agg limit (£m)"
+  ],
+  "rows": [
+   [
+    "Layer 2",
+    "25",
+    "20",
+    "100%",
+    "100%",
+    "0.3",
+    "1%",
+    "0.1%",
+    "50"
+   ],
+   [
+    "Layer 1",
+    "15",
+    "5",
+    "100%",
+    "100%",
+    "1.1",
+    "7.2%",
+    "0.5%",
+    "30"
+   ],
+   [
+    "Quota share 40%",
+    "25",
+    "",
+    "100%",
+    "100%",
+    "80",
+    "",
+    "40%",
+    "320"
+   ]
+  ],
+  "totals": [
+   "Total",
+   "40",
+   "",
+   "",
+   "",
+   "81.3",
+   "",
+   "",
+   ""
+  ],
+  "layers": [
+   "L2",
+   "L1",
+   "Q1"
+  ],
+  "tips": {
+   "Order": "Share of the 100% layer put to market",
+   "Placed": "Share of the order that is placed",
+   "Premium (RTE) (£m)": "Premium (RTE) = EPI (gross) × Adj. rate",
+   "ROL": "ROL = Premium (RTE) ÷ Layer limit",
+   "Adj. rate": "Adj. rate = ROL × Layer limit ÷ EPI",
+   "Agg limit (£m)": "Agg limit = Limit × (1 + Reinstatements)"
+  },
+  "box": {
+   "x": 40,
+   "y": 560.0,
+   "w": 1200,
+   "h": 120.0,
+   "row_h": 24.0,
+   "size": 13.0
+  },
+  "col_w": [
+   200.0,
+   123.81,
+   171.43,
+   76.19,
+   85.71,
+   200.0,
+   66.67,
+   114.29,
+   161.9
+  ]
+ },
+ "show_table": true
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "ri-layercake/tower@1",
+  "currency": "GBP",
+  "units": "m",
+  "title": "Property cat XL 2027",
+  "subtitle": "Illustrative programme · loss occurring",
+  "layers": [
+    {
+      "id": "R",
+      "kind": "retention",
+      "limit": "25000000",
+      "attachment": "0",
+      "placed": "1"
+    },
+    {
+      "id": "L1",
+      "kind": "xl",
+      "limit": "25000000",
+      "attachment": "25000000",
+      "placed": "1",
+      "premium": "4100000",
+      "reinstatements": {
+        "count": 1,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    },
+    {
+      "id": "L2",
+      "kind": "xl",
+      "limit": "50000000",
+      "attachment": "50000000",
+      "placed": "1",
+      "premium": "4600000",
+      "reinstatements": {
+        "count": 1,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    },
+    {
+      "id": "L3",
+      "kind": "xl",
+      "limit": "100000000",
+      "attachment": "100000000",
+      "placed": "0.9",
+      "premium": "5200000",
+      "reinstatements": {
+        "count": 1,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    },
+    {
+      "id": "L4",
+      "kind": "xl",
+      "limit": "150000000",
+      "attachment": "200000000",
+      "placed": "0.85",
+      "premium": "4400000",
+      "reinstatements": {
+        "count": 1,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    },
+    {
+      "id": "L5",
+      "kind": "xl",
+      "limit": "200000000",
+      "attachment": "350000000",
+      "placed": "0.7",
+      "premium": "3600000",
+      "reinstatements": {
+        "count": 1,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    }
+  ]
+}

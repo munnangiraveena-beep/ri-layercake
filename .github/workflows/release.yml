@@ -1,0 +1,91 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Tag matches package version
+        run: |
+          v=$(python -c "import re;print(re.search(r'__version__ = \"(.+)\"', open('python/src/ri_layercake/__init__.py').read()).group(1))")
+          test "v$v" = "${GITHUB_REF_NAME}" || (echo "Tag ${GITHUB_REF_NAME} does not match version $v" && exit 1)
+      - run: pip install build && python -m build python --outdir python/dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: python/dist/*
+
+  pypi:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write  # trusted publishing
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
+
+  web:
+    needs: pypi
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: python/dist
+      - name: Execute the notebook against the released wheel
+        run: |
+          pip install ../python/dist/*.whl "openpyxl>=3.1" pandas nbconvert ipykernel
+          mkdir -p /tmp/nb && cp ../notebooks/how-to-use.ipynb /tmp/nb/
+          jupyter nbconvert --to notebook --execute /tmp/nb/how-to-use.ipynb --output-dir /tmp/nb --output executed.ipynb
+          mkdir -p public/docs public/prerender
+          python ../scripts/notebook_to_json.py /tmp/nb/executed.ipynb public/docs/how-to-use.json
+          python ../scripts/prerender.py public/prerender/default.json
+      - run: npm ci && npm run py && npm run build
+      - name: Deploy to Vercel production
+        run: npx vercel deploy --prod --yes --token "$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+  github-release:
+    needs: web
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - name: Release notes from the changelog
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          awk -v v="$v" '$0 ~ "^## \\[" v "\\]" {f=1; next} /^## \[/ {f=0} f' CHANGELOG.md > notes.md
+      - run: gh release create "$GITHUB_REF_NAME" dist/* --notes-file notes.md
+        env:
+          GH_TOKEN: ${{ github.token }}

@@ -1,0 +1,295 @@
+{
+ "schema": "ri-layercake/scene@1",
+ "frame": {
+  "w": 1280,
+  "h": 720,
+  "name": "slide_16x9"
+ },
+ "palette": "ocean",
+ "colors": {
+  "accent1": "#0E5A8A",
+  "accent2": "#1C7C9C",
+  "accent3": "#3FA7B5",
+  "accent4": "#7BC4C4",
+  "accent5": "#E0A33B",
+  "accent6": "#C4513A",
+  "bg1": "#FFFFFF",
+  "bg2": "#E8EEF3",
+  "dk1": "#1B2733",
+  "dk2": "#16324F",
+  "error": "#C0392B",
+  "folHlink": "#5B4B8A",
+  "hlink": "#0E5A8A",
+  "lt1": "#FFFFFF",
+  "lt2": "#E8EEF3",
+  "tx1": "#1B2733",
+  "tx2": "#16324F"
+ },
+ "shapes": [
+  {
+   "type": "text",
+   "id": "title",
+   "x": 40,
+   "y": 66,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Stop loss on the net account",
+     "b": true
+    }
+   ],
+   "size": 28,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "title"
+  },
+  {
+   "type": "text",
+   "id": "subtitle",
+   "x": 40,
+   "y": 100,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Layers set as % of EPI, shown in amounts"
+    }
+   ],
+   "size": 16,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.35
+   },
+   "role": "subtitle"
+  },
+  {
+   "type": "text",
+   "id": "sl.header",
+   "x": 448.0,
+   "y": 146.0,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Stop loss",
+     "b": true,
+     "s": 13
+    },
+    {
+     "t": "annual aggregate, % of EPI",
+     "s": 10.5
+    }
+   ],
+   "size": 13,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "caption"
+  },
+  {
+   "type": "rect",
+   "id": "S1.block",
+   "layer": "S1",
+   "x": 448.0,
+   "y": 600.0,
+   "w": 200.0,
+   "h": 80.0,
+   "fill": {
+    "theme": "accent5",
+    "tint": 0.0
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "sl"
+  },
+  {
+   "type": "text",
+   "id": "S1.label",
+   "layer": "S1",
+   "x": 548.0,
+   "y": 638.31,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "20% xs 85%",
+     "b": true,
+     "s": 13
+    },
+    {
+     "t": "£16m xs £68m",
+     "s": 10.5
+    }
+   ],
+   "size": 13,
+   "fill": {
+    "theme": "bg1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "S2.block",
+   "layer": "S2",
+   "x": 448.0,
+   "y": 520.0,
+   "w": 200.0,
+   "h": 80.0,
+   "fill": {
+    "theme": "accent5",
+    "tint": 0.5
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "sl"
+  },
+  {
+   "type": "rect",
+   "id": "S2.unplaced",
+   "layer": "S2",
+   "x": 598.0,
+   "y": 520.0,
+   "w": 50.0,
+   "h": 80.0,
+   "fill": {
+    "pattern": "hatch",
+    "theme": "accent5",
+    "tint": 0.5
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "unplaced"
+  },
+  {
+   "type": "text",
+   "id": "S2.label",
+   "layer": "S2",
+   "x": 548.0,
+   "y": 551.75,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "25% xs 105%",
+     "b": true,
+     "s": 13
+    },
+    {
+     "t": "£20m xs £84m",
+     "s": 10.5
+    },
+    {
+     "t": "75% placed",
+     "s": 10.5
+    }
+   ],
+   "size": 13,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label"
+  }
+ ],
+ "hit": [
+  {
+   "layer": "S1",
+   "edge": "body",
+   "x": 448.0,
+   "y": 600.0,
+   "w": 200.0,
+   "h": 80.0
+  },
+  {
+   "layer": "S2",
+   "edge": "body",
+   "x": 448.0,
+   "y": 520.0,
+   "w": 200.0,
+   "h": 80.0
+  }
+ ],
+ "scale": null,
+ "table": {
+  "columns": [
+   "Layer",
+   "Limit (£m)",
+   "Attachment (£m)",
+   "Order",
+   "Placed",
+   "Premium (RTE) (£m)",
+   "ROL",
+   "Adj. rate",
+   "Agg limit (£m)"
+  ],
+  "rows": [
+   [
+    "Stop loss 2",
+    "20",
+    "84",
+    "100%",
+    "75%",
+    "0.2",
+    "1%",
+    "0.3%",
+    "20"
+   ],
+   [
+    "Stop loss 1",
+    "16",
+    "68",
+    "100%",
+    "100%",
+    "0.5",
+    "3.1%",
+    "0.6%",
+    "16"
+   ]
+  ],
+  "totals": [
+   "Total",
+   "0",
+   "",
+   "",
+   "",
+   "0.7",
+   "",
+   "",
+   ""
+  ],
+  "layers": [
+   "S2",
+   "S1"
+  ],
+  "tips": {
+   "Order": "Share of the 100% layer put to market",
+   "Placed": "Share of the order that is placed",
+   "Premium (RTE) (£m)": "Premium (RTE) = EPI (gross) × Adj. rate",
+   "ROL": "ROL = Premium (RTE) ÷ Layer limit",
+   "Adj. rate": "Adj. rate = ROL × Layer limit ÷ EPI",
+   "Agg limit (£m)": "Agg limit = Limit × (1 + Reinstatements)"
+  },
+  "box": {
+   "x": 680.0,
+   "y": 134.0,
+   "w": 560.0,
+   "h": 104.0,
+   "row_h": 26.0,
+   "size": 8.0
+  },
+  "col_w": [
+   78.03,
+   59.67,
+   82.62,
+   36.72,
+   41.31,
+   96.39,
+   32.13,
+   55.08,
+   78.05
+  ]
+ },
+ "show_table": true
+}

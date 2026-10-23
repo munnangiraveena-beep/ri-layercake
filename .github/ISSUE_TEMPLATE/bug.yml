@@ -1,0 +1,11 @@
+name: Bug
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    attributes: {label: What happened, description: "Steps, what you expected, what you saw."}
+    validations: {required: true}
+  - type: input
+    attributes: {label: Engine version, description: "Shown in the footer, or ri_layercake.__version__"}
+  - type: input
+    attributes: {label: Browser or Python version}

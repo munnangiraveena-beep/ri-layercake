@@ -1,0 +1,44 @@
+{
+  "schema": "ri-layercake/tower@1",
+  "currency": "GBP",
+  "units": "m",
+  "title": "Partly placed programme",
+  "subtitle": "Unplaced shares drawn hatched",
+  "layers": [
+    {
+      "id": "R",
+      "kind": "retention",
+      "limit": "15000000",
+      "attachment": "0",
+      "placed": "1"
+    },
+    {
+      "id": "L1",
+      "kind": "xl",
+      "limit": "35000000",
+      "attachment": "15000000",
+      "placed": "1"
+    },
+    {
+      "id": "L2",
+      "kind": "xl",
+      "limit": "50000000",
+      "attachment": "50000000",
+      "placed": "0.825"
+    },
+    {
+      "id": "L3",
+      "kind": "xl",
+      "limit": "100000000",
+      "attachment": "100000000",
+      "placed": "0.6"
+    },
+    {
+      "id": "L4",
+      "kind": "xl",
+      "limit": "100000000",
+      "attachment": "200000000",
+      "placed": "0.35"
+    }
+  ]
+}

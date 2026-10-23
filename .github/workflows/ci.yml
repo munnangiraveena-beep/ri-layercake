@@ -1,0 +1,108 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.11", "3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: python
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[dev]"
+      - run: ruff check src tests
+      - run: mypy src
+      - run: pytest -q
+
+  wheel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build && python -m build --wheel python --outdir python/dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheel
+          path: python/dist/*.whl
+
+  notebook:
+    needs: wheel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheel
+          path: dist
+      - run: pip install dist/*.whl "openpyxl>=3.1" pandas nbconvert ipykernel
+      - name: Execute the How to use notebook (fails on any cell error)
+        run: |
+          mkdir -p /tmp/nb && cp notebooks/how-to-use.ipynb /tmp/nb/
+          jupyter nbconvert --to notebook --execute /tmp/nb/how-to-use.ipynb --output-dir /tmp/nb --output executed.ipynb
+          mkdir -p web/public/docs
+          python scripts/notebook_to_json.py /tmp/nb/executed.ipynb web/public/docs/how-to-use.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docs
+          path: web/public/docs/how-to-use.json
+
+  web:
+    needs: [wheel, notebook]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheel
+          path: python/dist
+      - uses: actions/download-artifact@v4
+        with:
+          name: docs
+          path: web/public/docs
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npx eslint .
+      - name: Self-host Pyodide and wheels
+        run: npm run py
+      - name: Pyodide: the wheel installs and the core subset passes
+        run: node scripts/pyodide-test.mjs
+      - name: Pre-render the gallery scene
+        run: |
+          pip install ../python/dist/*.whl
+          python ../scripts/prerender.py public/prerender/default.json
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: npx playwright test
+        env:
+          CI: "1"
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: web/test-results

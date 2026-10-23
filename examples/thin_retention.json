@@ -1,0 +1,51 @@
+{
+  "schema": "ri-layercake/tower@1",
+  "currency": "GBP",
+  "units": "m",
+  "title": "Why log scale exists",
+  "subtitle": "A thin retention under a tall tower",
+  "layers": [
+    {
+      "id": "R",
+      "kind": "retention",
+      "limit": "2000000",
+      "attachment": "0",
+      "placed": "1"
+    },
+    {
+      "id": "L1",
+      "kind": "xl",
+      "limit": "8000000",
+      "attachment": "2000000",
+      "placed": "1"
+    },
+    {
+      "id": "L2",
+      "kind": "xl",
+      "limit": "40000000",
+      "attachment": "10000000",
+      "placed": "1"
+    },
+    {
+      "id": "L3",
+      "kind": "xl",
+      "limit": "150000000",
+      "attachment": "50000000",
+      "placed": "1"
+    },
+    {
+      "id": "L4",
+      "kind": "xl",
+      "limit": "300000000",
+      "attachment": "200000000",
+      "placed": "1"
+    },
+    {
+      "id": "L5",
+      "kind": "xl",
+      "limit": "500000000",
+      "attachment": "500000000",
+      "placed": "1"
+    }
+  ]
+}

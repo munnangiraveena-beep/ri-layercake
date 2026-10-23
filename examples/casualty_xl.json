@@ -1,0 +1,68 @@
+{
+  "schema": "ri-layercake/tower@1",
+  "currency": "GBP",
+  "units": "m",
+  "title": "Casualty XL 2027",
+  "subtitle": "Illustrative programme · risks attaching",
+  "layers": [
+    {
+      "id": "R",
+      "kind": "retention",
+      "limit": "5000000",
+      "attachment": "0",
+      "placed": "1"
+    },
+    {
+      "id": "L1",
+      "kind": "xl",
+      "limit": "5000000",
+      "attachment": "5000000",
+      "placed": "1",
+      "premium": "2300000",
+      "reinstatements": {
+        "count": null,
+        "rate": 0.0,
+        "pro_rata": "amount"
+      }
+    },
+    {
+      "id": "L2",
+      "kind": "xl",
+      "limit": "10000000",
+      "attachment": "10000000",
+      "placed": "1",
+      "premium": "1900000",
+      "reinstatements": {
+        "count": 2,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    },
+    {
+      "id": "L3",
+      "kind": "xl",
+      "limit": "20000000",
+      "attachment": "20000000",
+      "placed": "1",
+      "premium": "1400000",
+      "reinstatements": {
+        "count": 1,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    },
+    {
+      "id": "L4",
+      "kind": "xl",
+      "limit": "40000000",
+      "attachment": "40000000",
+      "placed": "0.8",
+      "premium": "1100000",
+      "reinstatements": {
+        "count": 1,
+        "rate": 1.0,
+        "pro_rata": "amount"
+      }
+    }
+  ]
+}

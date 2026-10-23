@@ -1,0 +1,930 @@
+{
+ "schema": "ri-layercake/scene@1",
+ "frame": {
+  "w": 1280,
+  "h": 720,
+  "name": "slide_16x9"
+ },
+ "palette": "ocean",
+ "colors": {
+  "accent1": "#0E5A8A",
+  "accent2": "#1C7C9C",
+  "accent3": "#3FA7B5",
+  "accent4": "#7BC4C4",
+  "accent5": "#E0A33B",
+  "accent6": "#C4513A",
+  "bg1": "#FFFFFF",
+  "bg2": "#E8EEF3",
+  "dk1": "#1B2733",
+  "dk2": "#16324F",
+  "error": "#C0392B",
+  "folHlink": "#5B4B8A",
+  "hlink": "#0E5A8A",
+  "lt1": "#FFFFFF",
+  "lt2": "#E8EEF3",
+  "tx1": "#1B2733",
+  "tx2": "#16324F"
+ },
+ "shapes": [
+  {
+   "type": "text",
+   "id": "title",
+   "x": 40,
+   "y": 66,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Gap and overlap",
+     "b": true
+    }
+   ],
+   "size": 28,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "title"
+  },
+  {
+   "type": "text",
+   "id": "subtitle",
+   "x": 40,
+   "y": 100,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Warnings shown in place, with fixes"
+    }
+   ],
+   "size": 16,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.35
+   },
+   "role": "subtitle"
+  },
+  {
+   "type": "line",
+   "id": "axis.y",
+   "x1": 270.0,
+   "y1": 484.0,
+   "x2": 270.0,
+   "y2": 134.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.0",
+   "x1": 265.0,
+   "y1": 484.0,
+   "x2": 270.0,
+   "y2": 484.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.0",
+   "x1": 286.0,
+   "y1": 484.0,
+   "x2": 846.0,
+   "y2": 484.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.0",
+   "x": 262.0,
+   "y": 488.0,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£0m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.1",
+   "x1": 265.0,
+   "y1": 411.08,
+   "x2": 270.0,
+   "y2": 411.08,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.1",
+   "x1": 286.0,
+   "y1": 411.08,
+   "x2": 846.0,
+   "y2": 411.08,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.1",
+   "x": 262.0,
+   "y": 415.08,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£50m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.2",
+   "x1": 265.0,
+   "y1": 338.17,
+   "x2": 270.0,
+   "y2": 338.17,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.2",
+   "x1": 286.0,
+   "y1": 338.17,
+   "x2": 846.0,
+   "y2": 338.17,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.2",
+   "x": 262.0,
+   "y": 342.17,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£100m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.3",
+   "x1": 265.0,
+   "y1": 265.25,
+   "x2": 270.0,
+   "y2": 265.25,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.3",
+   "x1": 286.0,
+   "y1": 265.25,
+   "x2": 846.0,
+   "y2": 265.25,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.3",
+   "x": 262.0,
+   "y": 269.25,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£150m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.4",
+   "x1": 265.0,
+   "y1": 192.33,
+   "x2": 270.0,
+   "y2": 192.33,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.4",
+   "x1": 286.0,
+   "y1": 192.33,
+   "x2": 846.0,
+   "y2": 192.33,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.4",
+   "x": 262.0,
+   "y": 196.33,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£200m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "rect",
+   "id": "R.block",
+   "layer": "R",
+   "x": 286.0,
+   "y": 469.42,
+   "w": 560.0,
+   "h": 14.58,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.88
+   },
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4,
+    "dash": "dash"
+   },
+   "role": "retention"
+  },
+  {
+   "type": "text",
+   "id": "R.label",
+   "layer": "R",
+   "x": 858.0,
+   "y": 481.21,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Retention £10m",
+     "b": true,
+     "s": 12
+    }
+   ],
+   "size": 12,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label",
+   "side": true
+  },
+  {
+   "type": "rect",
+   "id": "L1.block",
+   "layer": "L1",
+   "x": 286.0,
+   "y": 411.08,
+   "w": 560.0,
+   "h": 58.33,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.0
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L1.label",
+   "layer": "L1",
+   "x": 566.0,
+   "y": 438.0,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "£40m xs £10m",
+     "b": true,
+     "s": 14
+    },
+    {
+     "t": "Layer 1",
+     "s": 12
+    }
+   ],
+   "size": 14,
+   "fill": {
+    "theme": "bg1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "L2.block",
+   "layer": "L2",
+   "x": 286.0,
+   "y": 323.58,
+   "w": 280.0,
+   "h": 72.92,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.2
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L2.label",
+   "layer": "L2",
+   "x": 426.0,
+   "y": 357.79,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "£50m xs £60m",
+     "b": true,
+     "s": 14
+    },
+    {
+     "t": "Layer 2",
+     "s": 12
+    }
+   ],
+   "size": 14,
+   "fill": {
+    "theme": "bg1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "L3.block",
+   "layer": "L3",
+   "x": 566.0,
+   "y": 250.67,
+   "w": 280.0,
+   "h": 87.5,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.4
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L3.label",
+   "layer": "L3",
+   "x": 706.0,
+   "y": 292.17,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "£60m xs £100m",
+     "b": true,
+     "s": 14
+    },
+    {
+     "t": "Layer 3",
+     "s": 12
+    }
+   ],
+   "size": 14,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "L4.block",
+   "layer": "L4",
+   "x": 286.0,
+   "y": 134.0,
+   "w": 280.0,
+   "h": 145.83,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.6
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L4.label",
+   "layer": "L4",
+   "x": 426.0,
+   "y": 204.67,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "£100m xs £140m",
+     "b": true,
+     "s": 14
+    },
+    {
+     "t": "Layer 4",
+     "s": 12
+    }
+   ],
+   "size": 14,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "gap.L1.L2",
+   "x": 286.0,
+   "y": 396.5,
+   "w": 560.0,
+   "h": 14.58,
+   "fill": null,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.3,
+    "dash": "dash"
+   },
+   "role": "gap",
+   "key": "gap:L1:L2",
+   "layers": [
+    "L1",
+    "L2"
+   ]
+  },
+  {
+   "type": "text",
+   "id": "gap.L1.L2.label",
+   "x": 566.0,
+   "y": 407.79,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "Gap £10m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "gap_label"
+  },
+  {
+   "type": "rect",
+   "id": "overlap.L2.L3",
+   "x": 282.0,
+   "y": 323.58,
+   "w": 568.0,
+   "h": 14.58,
+   "fill": null,
+   "stroke": {
+    "status": "error",
+    "w": 2
+   },
+   "role": "overlap",
+   "key": "overlap:L2:L3",
+   "layers": [
+    "L2",
+    "L3"
+   ],
+   "export": false
+  },
+  {
+   "type": "rect",
+   "id": "overlap.L3.L4",
+   "x": 282.0,
+   "y": 250.67,
+   "w": 568.0,
+   "h": 29.17,
+   "fill": null,
+   "stroke": {
+    "status": "error",
+    "w": 2
+   },
+   "role": "overlap",
+   "key": "overlap:L3:L4",
+   "layers": [
+    "L3",
+    "L4"
+   ],
+   "export": false
+  },
+  {
+   "type": "line",
+   "id": "loss.line",
+   "x1": 262.0,
+   "y1": 309.0,
+   "x2": 870.0,
+   "y2": 309.0,
+   "stroke": {
+    "theme": "accent6",
+    "w": 2.5,
+    "dash": "dash"
+   },
+   "role": "loss"
+  },
+  {
+   "type": "text",
+   "id": "loss.callout",
+   "x": 876.0,
+   "y": 303.0,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Loss £120m",
+     "b": true,
+     "s": 13
+    },
+    {
+     "t": "Recovered £110m",
+     "s": 11
+    },
+    {
+     "t": "Retained £20m",
+     "s": 11
+    }
+   ],
+   "size": 13,
+   "fill": {
+    "theme": "accent6"
+   },
+   "role": "loss_callout"
+  }
+ ],
+ "hit": [
+  {
+   "layer": "R",
+   "edge": "top",
+   "x": 286.0,
+   "w": 560.0,
+   "y": 469.42,
+   "value": 10.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "R",
+   "edge": "body",
+   "x": 286.0,
+   "y": 469.42,
+   "w": 560.0,
+   "h": 14.58
+  },
+  {
+   "layer": "L1",
+   "edge": "top",
+   "x": 286.0,
+   "w": 560.0,
+   "y": 411.08,
+   "value": 50.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L1",
+   "edge": "bottom",
+   "x": 286.0,
+   "w": 560.0,
+   "y": 469.42,
+   "value": 10.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L1",
+   "edge": "body",
+   "x": 286.0,
+   "y": 411.08,
+   "w": 560.0,
+   "h": 58.33
+  },
+  {
+   "layer": "L1",
+   "edge": "placed",
+   "x": 846.0,
+   "y": 411.08,
+   "h": 58.33,
+   "x0": 286.0,
+   "w": 560.0,
+   "value": 1.0
+  },
+  {
+   "layer": "L2",
+   "edge": "top",
+   "x": 286.0,
+   "w": 280.0,
+   "y": 323.58,
+   "value": 110.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L2",
+   "edge": "bottom",
+   "x": 286.0,
+   "w": 280.0,
+   "y": 396.5,
+   "value": 60.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L2",
+   "edge": "body",
+   "x": 286.0,
+   "y": 323.58,
+   "w": 280.0,
+   "h": 72.92
+  },
+  {
+   "layer": "L2",
+   "edge": "placed",
+   "x": 566.0,
+   "y": 323.58,
+   "h": 72.92,
+   "x0": 286.0,
+   "w": 280.0,
+   "value": 1.0
+  },
+  {
+   "layer": "L3",
+   "edge": "top",
+   "x": 566.0,
+   "w": 280.0,
+   "y": 250.67,
+   "value": 160.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L3",
+   "edge": "bottom",
+   "x": 566.0,
+   "w": 280.0,
+   "y": 338.17,
+   "value": 100.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L3",
+   "edge": "body",
+   "x": 566.0,
+   "y": 250.67,
+   "w": 280.0,
+   "h": 87.5
+  },
+  {
+   "layer": "L3",
+   "edge": "placed",
+   "x": 846.0,
+   "y": 250.67,
+   "h": 87.5,
+   "x0": 566.0,
+   "w": 280.0,
+   "value": 1.0
+  },
+  {
+   "layer": "L4",
+   "edge": "top",
+   "x": 286.0,
+   "w": 280.0,
+   "y": 134.0,
+   "value": 240.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L4",
+   "edge": "bottom",
+   "x": 286.0,
+   "w": 280.0,
+   "y": 279.83,
+   "value": 140.0,
+   "per_px": 0.68571
+  },
+  {
+   "layer": "L4",
+   "edge": "body",
+   "x": 286.0,
+   "y": 134.0,
+   "w": 280.0,
+   "h": 145.83
+  },
+  {
+   "layer": "L4",
+   "edge": "placed",
+   "x": 566.0,
+   "y": 134.0,
+   "h": 145.83,
+   "x0": 286.0,
+   "w": 280.0,
+   "value": 1.0
+  }
+ ],
+ "scale": {
+  "type": "linear",
+  "y_bottom": 484.0,
+  "y_top": 134.0,
+  "v_max": 240.0
+ },
+ "table": {
+  "columns": [
+   "Layer",
+   "Limit (£m)",
+   "Attachment (£m)",
+   "Order",
+   "Placed",
+   "Premium (RTE) (£m)",
+   "ROL",
+   "Adj. rate",
+   "Agg limit (£m)"
+  ],
+  "rows": [
+   [
+    "Layer 4",
+    "100",
+    "140",
+    "100%",
+    "100%",
+    "",
+    "",
+    "",
+    "100"
+   ],
+   [
+    "Layer 3",
+    "60",
+    "100",
+    "100%",
+    "100%",
+    "",
+    "",
+    "",
+    "60"
+   ],
+   [
+    "Layer 2",
+    "50",
+    "60",
+    "100%",
+    "100%",
+    "",
+    "",
+    "",
+    "50"
+   ],
+   [
+    "Layer 1",
+    "40",
+    "10",
+    "100%",
+    "100%",
+    "",
+    "",
+    "",
+    "40"
+   ],
+   [
+    "Retention",
+    "10",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  ],
+  "totals": [
+   "Total",
+   "250",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "layers": [
+   "L4",
+   "L3",
+   "L2",
+   "L1",
+   "R"
+  ],
+  "tips": {
+   "Order": "Share of the 100% layer put to market",
+   "Placed": "Share of the order that is placed",
+   "Premium (RTE) (£m)": "Premium (RTE) = EPI (gross) × Adj. rate",
+   "ROL": "ROL = Premium (RTE) ÷ Layer limit",
+   "Adj. rate": "Adj. rate = ROL × Layer limit ÷ EPI",
+   "Agg limit (£m)": "Agg limit = Limit × (1 + Reinstatements)"
+  },
+  "box": {
+   "x": 40,
+   "y": 512.0,
+   "w": 1200,
+   "h": 168.0,
+   "row_h": 24.0,
+   "size": 13.0
+  },
+  "col_w": [
+   150.0,
+   130.0,
+   180.0,
+   80.0,
+   90.0,
+   210.0,
+   70.0,
+   120.0,
+   170.0
+  ]
+ },
+ "show_table": true
+}

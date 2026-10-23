@@ -1,0 +1,610 @@
+{
+ "01-basic.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ],
+   [
+    100,
+    100,
+    1
+   ]
+  ]
+ },
+ "02-headers-row3.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ],
+   [
+    100,
+    100,
+    1
+   ]
+  ]
+ },
+ "03-totals-row.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ],
+  "premiums": [
+   4,
+   3
+  ]
+ },
+ "04-blank-spacers.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "05-currency-symbols.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "06-usd-mn.tsv": {
+  "units": "m",
+  "currency": "USD",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "07-european-decimals.csv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40.5,
+    10,
+    1
+   ],
+   [
+    50,
+    50.5,
+    0.755
+   ]
+  ]
+ },
+ "08-european-thousands.csv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "09-full-units.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "10-space-thousands.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "11-share-decimal.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    0.75
+   ]
+  ]
+ },
+ "12-share-percent-number.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    0.6
+   ]
+  ]
+ },
+ "13-units-in-header.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "14-units-k-header.tsv": {
+  "units": "k",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    500,
+    250,
+    1
+   ],
+   [
+    750,
+    750,
+    1
+   ]
+  ]
+ },
+ "15-combined-column.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    0.75
+   ]
+  ]
+ },
+ "16-combined-no-header.txt": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ],
+   [
+    100,
+    100,
+    1
+   ]
+  ]
+ },
+ "17-headerless-chain.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ],
+   [
+    150,
+    100,
+    1
+   ]
+  ]
+ },
+ "18-headerless-limit-first.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ],
+   [
+    100,
+    100,
+    1
+   ]
+  ]
+ },
+ "19-headerless-with-share.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    0.8
+   ]
+  ]
+ },
+ "20-retention-row.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": 10,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "21-names.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "22-negative-parens.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    -5,
+    50,
+    1
+   ]
+  ]
+ },
+ "23-dash-empty.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ],
+  "premiums": [
+   null,
+   3
+  ]
+ },
+ "24-rol-column.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ],
+  "premiums": [
+   4,
+   3
+  ]
+ },
+ "25-rate-percent.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ]
+  ],
+  "premiums": [
+   4
+  ]
+ },
+ "26-html-table.html": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "27-html-merged.html": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "28-csv-quoted.csv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "29-crlf.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "30-mixed-units.tsv": {
+  "units": "k",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    500,
+    500,
+    1
+   ],
+   [
+    1000,
+    1000,
+    1
+   ]
+  ]
+ },
+ "31-bn.tsv": {
+  "units": "bn",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    1,
+    0.5,
+    1
+   ]
+  ]
+ },
+ "32-grand-total.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "33-reinstatements.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    1
+   ]
+  ]
+ },
+ "34-percent-share-header.tsv": {
+  "units": "m",
+  "currency": "GBP",
+  "retention": null,
+  "layers": [
+   [
+    40,
+    10,
+    1
+   ],
+   [
+    50,
+    50,
+    0.625
+   ]
+  ]
+ }
+}

@@ -1,0 +1,886 @@
+{
+ "schema": "ri-layercake/scene@1",
+ "frame": {
+  "w": 1280,
+  "h": 720,
+  "name": "slide_16x9"
+ },
+ "palette": "ocean",
+ "colors": {
+  "accent1": "#0E5A8A",
+  "accent2": "#1C7C9C",
+  "accent3": "#3FA7B5",
+  "accent4": "#7BC4C4",
+  "accent5": "#E0A33B",
+  "accent6": "#C4513A",
+  "bg1": "#FFFFFF",
+  "bg2": "#E8EEF3",
+  "dk1": "#1B2733",
+  "dk2": "#16324F",
+  "error": "#C0392B",
+  "folHlink": "#5B4B8A",
+  "hlink": "#0E5A8A",
+  "lt1": "#FFFFFF",
+  "lt2": "#E8EEF3",
+  "tx1": "#1B2733",
+  "tx2": "#16324F"
+ },
+ "shapes": [
+  {
+   "type": "text",
+   "id": "title",
+   "x": 40,
+   "y": 66,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Property QS and XoL side by side",
+     "b": true
+    }
+   ],
+   "size": 28,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "title"
+  },
+  {
+   "type": "text",
+   "id": "subtitle",
+   "x": 40,
+   "y": 100,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "XL attachment and limit × (1 − cession), on the retained share"
+    }
+   ],
+   "size": 16,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.35
+   },
+   "role": "subtitle"
+  },
+  {
+   "type": "line",
+   "id": "axis.y",
+   "x1": 339.0,
+   "y1": 508.0,
+   "x2": 339.0,
+   "y2": 134.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.0",
+   "x1": 334.0,
+   "y1": 508.0,
+   "x2": 339.0,
+   "y2": 508.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.0",
+   "x1": 355.0,
+   "y1": 508.0,
+   "x2": 915.0,
+   "y2": 508.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.0",
+   "x": 331.0,
+   "y": 512.0,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£0m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.1",
+   "x1": 334.0,
+   "y1": 445.67,
+   "x2": 339.0,
+   "y2": 445.67,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.1",
+   "x1": 355.0,
+   "y1": 445.67,
+   "x2": 915.0,
+   "y2": 445.67,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.1",
+   "x": 331.0,
+   "y": 449.67,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£20m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.2",
+   "x1": 334.0,
+   "y1": 383.33,
+   "x2": 339.0,
+   "y2": 383.33,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.2",
+   "x1": 355.0,
+   "y1": 383.33,
+   "x2": 915.0,
+   "y2": 383.33,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.2",
+   "x": 331.0,
+   "y": 387.33,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£40m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.3",
+   "x1": 334.0,
+   "y1": 321.0,
+   "x2": 339.0,
+   "y2": 321.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.3",
+   "x1": 355.0,
+   "y1": 321.0,
+   "x2": 915.0,
+   "y2": 321.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.3",
+   "x": 331.0,
+   "y": 325.0,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£60m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.4",
+   "x1": 334.0,
+   "y1": 258.67,
+   "x2": 339.0,
+   "y2": 258.67,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.4",
+   "x1": 355.0,
+   "y1": 258.67,
+   "x2": 915.0,
+   "y2": 258.67,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.4",
+   "x": 331.0,
+   "y": 262.67,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£80m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.5",
+   "x1": 334.0,
+   "y1": 196.33,
+   "x2": 339.0,
+   "y2": 196.33,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.5",
+   "x1": 355.0,
+   "y1": 196.33,
+   "x2": 915.0,
+   "y2": 196.33,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.5",
+   "x": 331.0,
+   "y": 200.33,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£100m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "line",
+   "id": "axis.tick.6",
+   "x1": 334.0,
+   "y1": 134.0,
+   "x2": 339.0,
+   "y2": 134.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 1,
+    "tint": 0.4
+   },
+   "role": "axis"
+  },
+  {
+   "type": "line",
+   "id": "grid.6",
+   "x1": 355.0,
+   "y1": 134.0,
+   "x2": 915.0,
+   "y2": 134.0,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.5,
+    "tint": 0.85
+   },
+   "role": "grid"
+  },
+  {
+   "type": "text",
+   "id": "axis.label.6",
+   "x": 331.0,
+   "y": 138.0,
+   "anchor": "end",
+   "runs": [
+    {
+     "t": "£120m",
+     "s": 11
+    }
+   ],
+   "size": 11,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.3
+   },
+   "role": "axis_label"
+  },
+  {
+   "type": "rect",
+   "id": "L1.block",
+   "layer": "L1",
+   "x": 355.0,
+   "y": 492.42,
+   "w": 560.0,
+   "h": 9.35,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.0
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L1.label",
+   "layer": "L1",
+   "x": 927.0,
+   "y": 495.03,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "£3m xs £2m",
+     "b": true,
+     "s": 12
+    },
+    {
+     "t": "Layer 1 · 2 @ 100%",
+     "s": 10.5
+    }
+   ],
+   "size": 12,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label",
+   "side": true
+  },
+  {
+   "type": "rect",
+   "id": "L2.block",
+   "layer": "L2",
+   "x": 355.0,
+   "y": 476.83,
+   "w": 560.0,
+   "h": 15.58,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.3
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "line",
+   "id": "L2.leader",
+   "layer": "L2",
+   "x1": 917.0,
+   "y1": 484.62,
+   "x2": 939.0,
+   "y2": 464.96,
+   "stroke": {
+    "theme": "tx1",
+    "w": 0.75,
+    "tint": 0.5
+   },
+   "role": "leader"
+  },
+  {
+   "type": "text",
+   "id": "L2.label",
+   "layer": "L2",
+   "x": 943.0,
+   "y": 462.9,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "£5m xs £5m",
+     "b": true,
+     "s": 12
+    },
+    {
+     "t": "Layer 2 · 2 @ 100%",
+     "s": 10.5
+    }
+   ],
+   "size": 12,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label",
+   "side": true
+  },
+  {
+   "type": "rect",
+   "id": "L3.block",
+   "layer": "L3",
+   "x": 355.0,
+   "y": 430.08,
+   "w": 560.0,
+   "h": 46.75,
+   "fill": {
+    "theme": "accent1",
+    "tint": 0.6
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "layer"
+  },
+  {
+   "type": "text",
+   "id": "L3.label",
+   "layer": "L3",
+   "x": 635.0,
+   "y": 451.21,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "£15m xs £10m",
+     "b": true,
+     "s": 14
+    },
+    {
+     "t": "Layer 3 · 1 @ 100%",
+     "s": 12
+    }
+   ],
+   "size": 14,
+   "fill": {
+    "theme": "tx1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "rect",
+   "id": "Q1.block",
+   "layer": "Q1",
+   "x": 145.0,
+   "y": 352.17,
+   "w": 130.0,
+   "h": 155.83,
+   "fill": {
+    "theme": "accent3",
+    "tint": 0
+   },
+   "stroke": {
+    "theme": "bg1",
+    "w": 1.5
+   },
+   "role": "qs"
+  },
+  {
+   "type": "text",
+   "id": "Q1.label",
+   "layer": "Q1",
+   "x": 210.0,
+   "y": 424.08,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "QS 20%",
+     "b": true,
+     "s": 13
+    },
+    {
+     "t": "limit £50m",
+     "s": 10.5
+    },
+    {
+     "t": "agg £100m",
+     "s": 10.5
+    }
+   ],
+   "size": 13,
+   "fill": {
+    "theme": "bg1"
+   },
+   "role": "label"
+  },
+  {
+   "type": "text",
+   "id": "xl.caption",
+   "x": 635.0,
+   "y": 524.0,
+   "anchor": "middle",
+   "runs": [
+    {
+     "t": "XL on the retained 80%: attachment and limit × 80%",
+     "s": 10.5
+    }
+   ],
+   "size": 10.5,
+   "fill": {
+    "theme": "tx1",
+    "tint": 0.35
+   },
+   "role": "caption"
+  },
+  {
+   "type": "line",
+   "id": "loss.line",
+   "x1": 331.0,
+   "y1": 134.0,
+   "x2": 939.0,
+   "y2": 134.0,
+   "stroke": {
+    "theme": "accent6",
+    "w": 2.5,
+    "dash": "dash"
+   },
+   "role": "loss"
+  },
+  {
+   "type": "text",
+   "id": "loss.callout",
+   "x": 945.0,
+   "y": 128.0,
+   "anchor": "start",
+   "runs": [
+    {
+     "t": "Loss £120m",
+     "b": true,
+     "s": 13
+    },
+    {
+     "t": "Recovered £28.4m",
+     "s": 11
+    },
+    {
+     "t": "Retained £91.6m",
+     "s": 11
+    }
+   ],
+   "size": 13,
+   "fill": {
+    "theme": "accent6"
+   },
+   "role": "loss_callout"
+  }
+ ],
+ "hit": [
+  {
+   "layer": "L1",
+   "edge": "top",
+   "x": 355.0,
+   "w": 560.0,
+   "y": 492.42,
+   "value": 5.0,
+   "per_px": 0.32086000000000003
+  },
+  {
+   "layer": "L1",
+   "edge": "bottom",
+   "x": 355.0,
+   "w": 560.0,
+   "y": 501.77,
+   "value": 2.0,
+   "per_px": 0.32086000000000003
+  },
+  {
+   "layer": "L1",
+   "edge": "body",
+   "x": 355.0,
+   "y": 492.42,
+   "w": 560.0,
+   "h": 9.35
+  },
+  {
+   "layer": "L1",
+   "edge": "placed",
+   "x": 915.0,
+   "y": 492.42,
+   "h": 9.35,
+   "x0": 355.0,
+   "w": 560.0,
+   "value": 1.0
+  },
+  {
+   "layer": "L2",
+   "edge": "top",
+   "x": 355.0,
+   "w": 560.0,
+   "y": 476.83,
+   "value": 10.0,
+   "per_px": 0.32086000000000003
+  },
+  {
+   "layer": "L2",
+   "edge": "bottom",
+   "x": 355.0,
+   "w": 560.0,
+   "y": 492.42,
+   "value": 5.0,
+   "per_px": 0.32086000000000003
+  },
+  {
+   "layer": "L2",
+   "edge": "body",
+   "x": 355.0,
+   "y": 476.83,
+   "w": 560.0,
+   "h": 15.58
+  },
+  {
+   "layer": "L2",
+   "edge": "placed",
+   "x": 915.0,
+   "y": 476.83,
+   "h": 15.58,
+   "x0": 355.0,
+   "w": 560.0,
+   "value": 1.0
+  },
+  {
+   "layer": "L3",
+   "edge": "top",
+   "x": 355.0,
+   "w": 560.0,
+   "y": 430.08,
+   "value": 25.0,
+   "per_px": 0.32086000000000003
+  },
+  {
+   "layer": "L3",
+   "edge": "bottom",
+   "x": 355.0,
+   "w": 560.0,
+   "y": 476.83,
+   "value": 10.0,
+   "per_px": 0.32086000000000003
+  },
+  {
+   "layer": "L3",
+   "edge": "body",
+   "x": 355.0,
+   "y": 430.08,
+   "w": 560.0,
+   "h": 46.75
+  },
+  {
+   "layer": "L3",
+   "edge": "placed",
+   "x": 915.0,
+   "y": 430.08,
+   "h": 46.75,
+   "x0": 355.0,
+   "w": 560.0,
+   "value": 1.0
+  },
+  {
+   "layer": "Q1",
+   "edge": "body",
+   "x": 145.0,
+   "y": 352.17,
+   "w": 130.0,
+   "h": 155.83
+  }
+ ],
+ "scale": {
+  "type": "linear",
+  "y_bottom": 508.0,
+  "y_top": 134.0,
+  "v_max": 120.0
+ },
+ "table": {
+  "columns": [
+   "Layer",
+   "Limit (£m)",
+   "Attachment (£m)",
+   "Order",
+   "Placed",
+   "Premium (RTE) (£m)",
+   "ROL",
+   "Adj. rate",
+   "Agg limit (£m)"
+  ],
+  "rows": [
+   [
+    "Layer 3",
+    "15",
+    "10",
+    "100%",
+    "100%",
+    "0.2",
+    "1%",
+    "0.1%",
+    "30"
+   ],
+   [
+    "Layer 2",
+    "5",
+    "5",
+    "100%",
+    "100%",
+    "0.5",
+    "9.4%",
+    "0.4%",
+    "15"
+   ],
+   [
+    "Layer 1",
+    "3",
+    "2",
+    "100%",
+    "100%",
+    "1",
+    "32.8%",
+    "0.8%",
+    "9"
+   ],
+   [
+    "Quota share 20%",
+    "50",
+    "",
+    "100%",
+    "100%",
+    "24",
+    "",
+    "20%",
+    "100"
+   ]
+  ],
+  "totals": [
+   "Total",
+   "23",
+   "",
+   "",
+   "",
+   "25.6",
+   "",
+   "",
+   ""
+  ],
+  "layers": [
+   "L3",
+   "L2",
+   "L1",
+   "Q1"
+  ],
+  "tips": {
+   "Order": "Share of the 100% layer put to market",
+   "Placed": "Share of the order that is placed",
+   "Premium (RTE) (£m)": "Premium (RTE) = EPI (gross) × Adj. rate",
+   "ROL": "ROL = Premium (RTE) ÷ Layer limit",
+   "Adj. rate": "Adj. rate = ROL × Layer limit ÷ EPI",
+   "Agg limit (£m)": "Agg limit = Limit × (1 + Reinstatements)"
+  },
+  "box": {
+   "x": 40,
+   "y": 536.0,
+   "w": 1200,
+   "h": 144.0,
+   "row_h": 24.0,
+   "size": 13.0
+  },
+  "col_w": [
+   198.43,
+   122.83,
+   170.08,
+   75.59,
+   85.04,
+   198.43,
+   75.59,
+   113.39,
+   160.62
+  ]
+ },
+ "show_table": true
+}

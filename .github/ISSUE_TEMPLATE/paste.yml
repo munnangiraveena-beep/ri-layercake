@@ -1,0 +1,12 @@
+name: Paste that failed to parse
+description: A block from Excel, CSV or shorthand that came out wrong
+labels: [parser]
+body:
+  - type: markdown
+    attributes: {value: "Please replace real figures with invented ones before pasting."}
+  - type: textarea
+    attributes: {label: The paste, render: text}
+    validations: {required: true}
+  - type: textarea
+    attributes: {label: What you expected, description: "The layers you meant, e.g. 40 xs 10, 50 xs 50 @ 75%"}
+    validations: {required: true}

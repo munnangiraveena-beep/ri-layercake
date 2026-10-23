@@ -1,0 +1,7 @@
+name: Feature request
+description: Something ri-layercake should do
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes: {label: What would you like to do, description: "The job, not the solution."}
+    validations: {required: true}
