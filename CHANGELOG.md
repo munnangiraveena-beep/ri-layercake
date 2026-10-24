@@ -5,7 +5,7 @@ and the project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-## [0.1.0] - unreleased
+## [0.1.0] - 2026-10-24
 
 ### Added
 - Python package `ri-layercake`: immutable Tower model, shorthand grammar, Excel/CSV/HTML paste parser,
