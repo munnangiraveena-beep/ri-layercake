@@ -10,7 +10,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [{ name = "Banu Munnangi" }]
-keywords = ["reinsurance", "excess of loss", "tower", "powerpoint", "pptx", "insurance"]
+keywords = ["reinsurance", "excess of loss", "quota share", "stop loss", "tower", "powerpoint", "pptx", "insurance"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Financial and Insurance Industry",
@@ -24,7 +24,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 # One install gives everything: PowerPoint, Excel input, DataFrames and matplotlib plots.
-dependencies = ["python-pptx>=1.0", "openpyxl>=3.1", "pandas>=1.5", "matplotlib>=3.7"]
+dependencies = ["python-pptx>=1.0", "openpyxl>=3.1", "numpy>=1.23", "pandas>=1.5", "matplotlib>=3.7"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "hypothesis>=6", "ruff>=0.5", "mypy>=1.10"]
@@ -33,8 +33,12 @@ dev = ["pytest>=8", "hypothesis>=6", "ruff>=0.5", "mypy>=1.10"]
 ri-layercake = "ri_layercake.cli:main"
 
 [project.urls]
-Homepage = "https://ri-layercake.banumunnangi.com"
+Homepage = "https://ri-layercake.vercel.app"
+Documentation = "https://ri-layercake.vercel.app/how-to-use/"
+Formulas = "https://ri-layercake.vercel.app/formulas/"
 Source = "https://github.com/munnangiraveena-beep/ri-layercake"
+Issues = "https://github.com/munnangiraveena-beep/ri-layercake/issues"
+Changelog = "https://github.com/munnangiraveena-beep/ri-layercake/blob/main/CHANGELOG.md"
 
 [tool.hatch.version]
 path = "src/ri_layercake/__init__.py"

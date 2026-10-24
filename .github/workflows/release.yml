@@ -1,8 +1,13 @@
 name: Release
 
+# Run by hand (Actions → Release → Run workflow) for a dry run to TestPyPI.
+# Push a tag such as v0.1.0 to publish to PyPI and create the GitHub release.
+# Both use trusted publishing: no API tokens are stored anywhere.
+
 on:
   push:
     tags: ["v*.*.*"]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,16 +18,46 @@ jobs:
         with:
           python-version: "3.12"
       - name: Tag matches package version
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
           v=$(python -c "import re;print(re.search(r'__version__ = \"(.+)\"', open('python/src/ri_layercake/__init__.py').read()).group(1))")
           test "v$v" = "${GITHUB_REF_NAME}" || (echo "Tag ${GITHUB_REF_NAME} does not match version $v" && exit 1)
-      - run: pip install build && python -m build python --outdir python/dist
+      - name: Tests, lint and types must pass before anything is published
+        working-directory: python
+        run: |
+          pip install -e ".[dev]"
+          ruff check src tests
+          mypy src
+          pytest -q
+      - run: pip install build twine && python -m build python --outdir python/dist && twine check --strict python/dist/*
+      - name: The built wheel installs cleanly and imports
+        run: |
+          python -m venv /tmp/check && /tmp/check/bin/pip install python/dist/*.whl
+          /tmp/check/bin/python -I -c "import ri_layercake, ri_layercake.risk; print(ri_layercake.__version__)"
       - uses: actions/upload-artifact@v4
         with:
           name: dist
           path: python/dist/*
 
+  testpypi:
+    if: github.event_name == 'workflow_dispatch'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # trusted publishing
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      # No environment and no attestations: the dry run happens while the repo is still private.
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          attestations: false
+
   pypi:
+    if: startsWith(github.ref, 'refs/tags/')
     needs: build
     runs-on: ubuntu-latest
     environment: pypi
@@ -35,44 +70,8 @@ jobs:
           path: dist
       - uses: pypa/gh-action-pypi-publish@release/v1
 
-  web:
-    needs: pypi
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: web/package-lock.json
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-      - uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: python/dist
-      - name: Execute the notebook against the released wheel
-        run: |
-          pip install ../python/dist/*.whl "openpyxl>=3.1" pandas nbconvert ipykernel
-          mkdir -p /tmp/nb && cp ../notebooks/how-to-use.ipynb /tmp/nb/
-          jupyter nbconvert --to notebook --execute /tmp/nb/how-to-use.ipynb --output-dir /tmp/nb --output executed.ipynb
-          mkdir -p public/docs public/prerender
-          python ../scripts/notebook_to_json.py /tmp/nb/executed.ipynb public/docs/how-to-use.json
-          python ../scripts/prerender.py public/prerender/default.json
-      - run: npm ci && npm run py && npm run build
-      - name: Deploy to Vercel production
-        run: npx vercel deploy --prod --yes --token "$VERCEL_TOKEN"
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
   github-release:
-    needs: web
+    needs: pypi
     runs-on: ubuntu-latest
     permissions:
       contents: write

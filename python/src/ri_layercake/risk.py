@@ -601,7 +601,7 @@ class Explore:
 
 def explore(t: Tower, x: str, y: str | None = None, levers: Levers | None = None,
             settings: RiskSettings | None = None, sim: Simulation | None = None) -> Explore:
-    """Metrics over one or two levers, holding the rest at `levers`; best = highest RoC that is placeable."""
+    """Metrics over one or two levers, holding the rest at `levers`; best = best-scoring efficient placeable cell."""
     s = settings or RiskSettings()
     sim = sim or simulate(t, s)
     lv = levers or Levers()

@@ -6,10 +6,8 @@ tower, and export a native, editable PowerPoint slide that takes on your deck's 
 It comes as two things built from one Python engine:
 
 - **A Python package**: `pip install ri-layercake`, for scripts, Jupyter and the command line.
-- **A web app**: a Playground that runs the same package in your browser (Pyodide). There is no server, and your
+- **A web app**: the [Playground](https://ri-layercake.vercel.app) runs the same package in your browser (Pyodide). There is no server, and your
   programme data never leaves your machine.
-
-<!-- TODO: 30-second GIF of paste → drag → drop a loss → export -->
 
 ## Quick start: Python
 
@@ -32,7 +30,7 @@ Quota share, per risk XoL and stop loss in one programme, with the premium walk:
 ```python
 prog = lc.Tower.from_text(
     "epi 150, qs 25% limit 40 agg 400 comm 32%, 2 ret, 8 xs 2 rate 1.8% el 1.2 ncb 10%, sl 20% xs 85% rate 1.5%"
-).programme(internal_expenses=0.11, expected_loss_ratio=0.6, brokerage=0.1, tax=0.02)
+).programme(internal_expenses=0.11, expected_loss_ratio=0.6, brokerage_xl=0.1, brokerage_qs=0.025, tax=0.02)
 
 prog.exposure(50)                  # one risk: QS cedes first, the net passes through the XL layers
 prog.programme(arrangement="side_by_side").exposure(50)   # XL attachment and limit x (1 - cession)
@@ -40,6 +38,17 @@ prog.aggregate(130)                # a year: QS terms, stop loss on the net loss
 prog.portfolio("risks.xlsx")       # trapped exposure: median(0, E - A, L) per risk and layer
 prog.premium_walk().plot()         # EPI to result and margin, as a waterfall
 prog.plot()                        # the tower with matplotlib
+```
+
+Find the structure that balances net loss ratio, margin and return on capital (20,000 simulated years, capital as
+the 1-in-200 shortfall from the expected result):
+
+```python
+from ri_layercake import risk
+
+ex = risk.explore(prog, "qs:*", "commission")   # QS cession against a commission change
+ex.current, ex.best                              # today's metrics; the best-balanced placeable cell
+ex.plot()                                        # efficient frontier and return on capital map
 ```
 
 From a workbook, one slide per programme:
@@ -60,7 +69,7 @@ ri-layercake loss "40 xs 10, 50 xs 50" 75  # drop-a-loss table
 
 ## Quick start: web app
 
-Open the Playground, paste a block from Excel (or type `10 ret, 40 xs 10, 50 xs 50`), drag the layer edges, slide a
+Open the [Playground](https://ri-layercake.vercel.app), paste a block from Excel (or type `10 ret, 40 xs 10, 50 xs 50`), drag the layer edges, slide a
 loss up the tower, and press **Download PowerPoint**. Add your own .pptx or .potx to use its theme and title layout.
 
 ## Three example towers
@@ -71,7 +80,7 @@ loss up the tower, and press **Download PowerPoint**. Add your own .pptx or .pot
 | Casualty XL | `5 ret, 5 xs 5, 10 xs 10 2 @ 100%, 20 xs 20, 40 xs 40 @ 80%` |
 | Gap and overlap | `10 ret, 40 xs 10, 50 xs 60, 60 xs 100, 100 xs 140` |
 
-More are in [examples/](examples/) and in the Playground's gallery. All numbers are invented.
+More are in the [examples folder](https://github.com/munnangiraveena-beep/ri-layercake/tree/main/examples) and in the Playground's gallery. All numbers are invented.
 
 ## Shorthand
 
@@ -123,6 +132,10 @@ npx playwright test                                      # end-to-end in Chromiu
 
 ## Disclaimer
 
-Outputs are illustrative, based on the inputs provided, and not pricing or actuarial advice.
+ri-layercake is an independent personal project, built in the author's own time on openly published, textbook
+methods with synthetic or illustrative data. It contains no data, code, models or methodology from any current or
+former employer or its clients, and it is not affiliated with or endorsed by any of them. Outputs are illustrative and
+depend entirely on the inputs provided: they are not pricing, underwriting, actuarial, investment or professional
+advice, and should not be relied on for any real transaction.
 
 Licence: MIT.
