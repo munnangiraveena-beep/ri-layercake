@@ -9,6 +9,7 @@ import { EditorState } from "@codemirror/state";
 import { EditorView, keymap, lineNumbers } from "@codemirror/view";
 import { tags as t } from "@lezer/highlight";
 import { call, engineStatus, onEngineStatus, startEngine, type EngineStatus } from "@/lib/engine";
+import { HANDOVER_KEY } from "@/components/Panels";
 import { useStore } from "@/lib/store";
 import type { TowerJSON } from "@/lib/types";
 
@@ -52,9 +53,8 @@ export default function Notebook() {
         const loaded: Cell[] = nb.cells.map((c) => c.type === "markdown"
           ? { id: ++counter, type: "markdown", source: c.source }
           : { id: ++counter, type: "code", source: c.source, outputs: c.outputs ?? [], files: [], count: null, running: false, tower: null });
-        const hash = typeof window !== "undefined" ? window.location.hash : "";
-        if (hash.startsWith("#code=")) {
-          const code = decodeURIComponent(hash.slice(6));
+        const code = takeHandOver();
+        if (code) {
           loaded.unshift(
             { id: ++counter, type: "markdown", source: "## From the Playground\n\nThe Python that rebuilds your tower. Press **Run**." },
             { id: ++counter, type: "code", source: code, outputs: [], files: [], count: null, running: false, tower: null },
@@ -182,6 +182,19 @@ function Editor({ initial, onChange, onRun }: { initial: string; onChange: (v: s
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return <div className="nb-editor" ref={host} />;
+}
+
+// Code from the Playground's "Open in How to use" arrives through this site's own storage, never
+// the URL, so a link from elsewhere cannot pre-fill a cell. Read once, and only if just written.
+function takeHandOver(): string | null {
+  try {
+    const raw = localStorage.getItem(HANDOVER_KEY);
+    localStorage.removeItem(HANDOVER_KEY);
+    const v = raw ? (JSON.parse(raw) as { code?: unknown; at?: unknown }) : null;
+    return v && typeof v.code === "string" && typeof v.at === "number" && Date.now() - v.at < 60_000 ? v.code : null;
+  } catch {
+    return null;
+  }
 }
 
 /** A small markdown renderer for our own guide text: headings, paragraphs, lists, code, bold, links. */

@@ -133,11 +133,22 @@ function CodePanel({ onClose }: { onClose: () => void }) {
       <pre><code>{code}</code></pre>
       <div className="dialog-actions">
         <button type="button" onClick={() => void navigator.clipboard.writeText(code)}>Copy</button>
-        <a className="button" href={`/how-to-use/#code=${encodeURIComponent(code)}`}>Open in How to use</a>
+        {/* Handed over in this site's own storage, not the URL, so a crafted link can never put code in a cell. */}
+        <a className="button" href="/how-to-use/" onClick={() => handOver(code)}>Open in How to use</a>
         <button type="button" onClick={() => ref.current?.close()}>Close</button>
       </div>
     </dialog>
   );
+}
+
+export const HANDOVER_KEY = "ri-layercake:code-for-notebook";
+
+function handOver(code: string) {
+  try {
+    localStorage.setItem(HANDOVER_KEY, JSON.stringify({ code, at: Date.now() }));
+  } catch {
+    // storage blocked: the guide simply opens without the extra cell
+  }
 }
 
 // ---------------------------------------------------------------------- warnings
