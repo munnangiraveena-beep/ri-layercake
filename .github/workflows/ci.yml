@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install build && python -m build --wheel python --outdir python/dist
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: wheel
           path: python/dist/*.whl
@@ -56,7 +56,7 @@ jobs:
           jupyter nbconvert --to notebook --execute /tmp/nb/how-to-use.ipynb --output-dir /tmp/nb --output executed.ipynb
           mkdir -p web/public/docs
           python scripts/notebook_to_json.py /tmp/nb/executed.ipynb web/public/docs/how-to-use.json
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: docs
           path: web/public/docs/how-to-use.json
@@ -101,7 +101,7 @@ jobs:
       - run: npx playwright test
         env:
           CI: "1"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-report
